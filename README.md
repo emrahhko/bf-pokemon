@@ -1,26 +1,24 @@
-# Image gallery
+# Table of contents
 
-> A simple
-
-## Table of contents
-
-- [General info](#general-info)
-- [Screenshots](#screenshots)
-- [Technologies](#technologies)
-- [Setup](#setup)
-- [Features](#features)
-- [Status](#status)
-- [Inspiration](#inspiration)
-- [Contact](#contact)
+- [Table of contents](#table-of-contents)
+  - [General info](#general-info)
+  - [Screenshots](#screenshots)
+  - [Technologies](#technologies)
+  - [Setup](#setup)
+  - [Code Examples](#code-examples)
+  - [Features](#features)
+  - [Status](#status)
+  - [Inspiration](#inspiration)
+  - [Contact](#contact)
 
 ## General info
 
 > The objective of the project is to practice separation of concern in
-> JavaScript.
+> JavaScript and work with an API.
 
 ## Screenshots
 
-![Example screenshot]()
+![screenshot](./assets/pokemon-screen.png)
 
 ## Technologies
 
@@ -31,12 +29,23 @@
 
 ## Setup
 
-clone the repo and start using the stop watch.
+clone the repo and start using the website.
 
 ## Code Examples
 
 ```js
-
+export const getPokemonHandler = async () => {
+    const value = Number(dom.input.value);
+    if (data.oldId === value) {
+        return;
+    }
+    const isValidId = value > 0 && value < 1280;
+    if (!isValidId) {
+        dom.error.className = 'error';
+        dom.error.innerText = 'please enter a valid id';
+        dom.root.append(dom.error);
+        return;
+    }
 ```
 
 ## Features
@@ -54,8 +63,10 @@ To-do list:
 
 ## Status
 
-Project is: _in progress_
+Project is: _finished_
 
 ## Inspiration
 
 ## Contact
+
+- [Emrah](https://github.com/emrahhko)
